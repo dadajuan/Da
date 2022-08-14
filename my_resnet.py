@@ -6,6 +6,10 @@ from torch import nn
 更改一点
 
 """
+
+"""
+再次改
+"""
 vgg19 = models.vgg19_bn(pretrained=True)
 vgg19.classifier._modules['6'] = nn.Sequential(nn.Linear(4096, 5), nn.Softmax(dim=1))
 
